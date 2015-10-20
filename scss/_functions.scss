@@ -1,0 +1,5 @@
+@function rem_calc($value, $base_value: $rem_base) {
+	$value: $value / $base_value * 1rem;
+	@if ($value == 0rem) { $value: 0; } // Turn 0rem into 0
+	@return $value;
+}

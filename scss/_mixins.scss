@@ -1,0 +1,40 @@
+// Transform
+@mixin transform($transform...) {
+    -moz-transform:    $transform;
+    -o-transform:      $transform;
+    -webkit-transform: $transform;
+    transform:         $transform;
+}
+
+// Transitions
+@mixin transition($transition...) {
+    -moz-transition:    $transition;
+    -o-transition:      $transition;
+    -webkit-transition: $transition;
+    transition:         $transition;
+}
+
+// Box-shadow
+@mixin box-shadow($value...) {
+     -webkit-box-shadow: $value;
+	 -moz-box-shadow: $value;
+     -o-box-shadow: $value;
+	 box-shadow: $value;
+}
+
+// Border radius
+@mixin border-radius($radius...) {
+  -webkit-border-radius: $radius;
+  -o-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+  background-clip: padding-box;  /* stops bg color from leaking outside the border: */
+}
+
+// Box sizing
+@mixin box-sizing($value...) {
+     -webkit-box-sizing: $value;
+     -moz-box-sizing: $value;
+     -o-box-sizing: $value;
+     box-sizing: $value;
+}

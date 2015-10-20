@@ -1,0 +1,125 @@
+body {
+	margin: 0;
+}
+
+div.row {
+	max-width: $grid_width;
+	margin: 0 auto 0 auto;
+	position: relative;
+
+	&:after {
+		content: " ";
+		clear: both;
+		position: relative;
+		display: block;
+	}
+
+	>.col {
+		position: relative;
+		display: block;
+		float: none;
+		width: 100%;
+		padding: 0 $gutter_width 0 $gutter_width;
+		@include box-sizing(border-box);
+		@include transition(width, 0.3s, ease-in-out);
+
+		@media screen and (min-width: $small_breakpoint) {
+			
+			@for $i from 1 through $grid_columns {
+				&.s-#{$i} {
+					@if $i == $grid_columns {
+						width: 100%;
+						float: none;
+					} @else {
+						
+						width: percentage($i / $grid_columns);
+						float: left;
+					
+					}
+				}
+			}
+		}
+
+		@media screen and (min-width: $medium_breakpoint) {
+			
+			@for $i from 1 through $grid_columns {
+				&.m-#{$i} {
+					@if $i == $grid_columns {
+						width: 100%;
+						float: none;
+					} @else {
+						
+						width: percentage($i / $grid_columns);
+						float: left;
+					
+					}
+				}
+			}
+		}
+
+		@media screen and (min-width: $large_breakpoint) {
+			
+			@for $i from 1 through $grid_columns {
+				&.l-#{$i} {
+					@if $i == $grid_columns {
+						width: 100%;
+						float: none;
+					} @else {
+						
+						width: percentage($i / $grid_columns);
+						float: left;
+					
+					}
+				}
+			}
+		}
+	}
+
+	&.no-gutter >.col {
+		padding: 0;
+	}
+
+}
+
+div.row.reverse {
+	
+	>.col {
+		float: none;
+		
+		@media screen and (min-width: $small_breakpoint) {
+			
+			@for $i from 1 through $grid_columns {
+				&.s-#{$i} {
+					@if $i != $grid_columns {
+						float: right;
+					}
+				}
+			}
+		}
+
+		@media screen and (min-width: $medium_breakpoint) {
+			
+			@for $i from 1 through $grid_columns {
+				&.m-#{$i} {
+					@if $i != $grid_columns {
+						float: right;
+					}
+				}
+			}
+		}
+
+		@media screen and (min-width: $large_breakpoint) {
+			
+			@for $i from 1 through $grid_columns {
+				&.l-#{$i} {
+					@if $i != $grid_columns {
+						
+						float: right;
+					
+					}
+				}
+			}
+		}
+	}
+
+}

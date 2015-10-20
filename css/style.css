@@ -1,0 +1,15 @@
+* {
+	font-weight: 300;
+}
+
+.fill {
+	border: 1px solid #999;
+}
+
+.fill .col {
+	background: #ccc;
+}
+
+.fill .col:nth-child(even) {
+	background: #eee;
+}

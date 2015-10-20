@@ -1,0 +1,11 @@
+$rem_base: 16;
+$grid_width: rem_calc(1024);
+$base_font_size: 16px;
+$primary_font_family: Arial;
+$grid_columns: 12;
+$gutter_width: rem_calc(15);
+
+$small_breakpoint: rem_calc(320);
+$medium_breakpoint: rem_calc(480);
+$large_breakpoint: rem_calc(768);
+$xlarge_breakpoint: $grid_width;

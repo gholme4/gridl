@@ -1,0 +1,27 @@
+{
+  "name": "gridl",
+  "version": "0.1.0",
+  "description": "Lightweight responsive CSS framework",
+  "keywords": [
+    "css",
+    "responsive",
+    "rwd",
+    "design",
+    "framework",
+    "grid"
+  ],
+  "author": "George Holmes II",
+  "license": "MIT",
+  "devDependencies": {
+    "node-sass": "~1.2.3",
+    "grunt": "~0.4.1",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-sass": "~0.17.0",
+    "grunt-contrib-cssmin": "^0.12.2",
+    "grunt-contrib-copy": "~0.4.1",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-uglify": "~0.2.7",
+    "matchdep": "~0.1.2"
+  }
+}
+
